@@ -1,0 +1,13 @@
+## Ignore all files
+*
+
+## Include project files
+!/src/
+!/target/
+!/.m2/
+!pom.xml
+!lombok.config
+
+## Exclude IDE files
+# JetBrains
+*.iml

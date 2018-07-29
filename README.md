@@ -11,7 +11,7 @@ Need to create a web application which allows the next operations:
 
 Requirements: embedded microcontainer (jetty, tomcat), postgres, maven, spring.
 
-## JSON example
+### JSON example
 
 ```json
 {
@@ -45,3 +45,21 @@ Requirements: embedded microcontainer (jetty, tomcat), postgres, maven, spring.
 	}]
 }
 ```
+
+## The environment variables
+
+### `TRACKSTAT_PORT`
+
+Specifies port of this application. Default value is `8080`.
+
+### `POSTGRES_URL`
+
+Specifies URL of PostgreSQL database. Default value is `jdbc:postgresql://localhost:5432/testdb`.
+
+### `POSTGRES_USERNAME`
+
+Specifies username of PostgreSQL database user. Default value is `postgres`.
+
+### `POSTGRES_PASSWORD`
+
+Specifies user's password in PostgreSQL. Default value is `postgres`.

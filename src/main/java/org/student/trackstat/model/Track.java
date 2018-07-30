@@ -17,12 +17,15 @@ import lombok.NoArgsConstructor;
 public class Track {
 
   /** The track identifier. */
+  @JsonProperty("id")
   private long id;
 
   /** The track's name. */
+  @JsonProperty("name")
   private String name;
 
   /** The track's description. */
+  @JsonProperty("description")
   private String description;
 
   /** The length of the current track. */

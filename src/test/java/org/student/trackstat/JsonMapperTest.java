@@ -6,12 +6,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import java.io.IOException;
 import lombok.extern.java.Log;
 import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.student.trackstat.model.Car;
 import org.student.trackstat.model.Car.Transmission;
 import org.student.trackstat.model.MeasureUnit;
 
 @Log
+@Tag("unit")
 @DisplayName("Unit-test for JSON serializer/deserializer")
 class JsonMapperTest {
 

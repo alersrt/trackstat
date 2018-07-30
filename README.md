@@ -63,3 +63,13 @@ Specifies username of PostgreSQL database user. Default value is `postgres`.
 ### `POSTGRES_PASSWORD`
 
 Specifies user's password in PostgreSQL. Default value is `postgres`.
+
+## The REST endpoints
+
+### `POST <address>/api/tracks`
+
+Body is json which is presented above.
+
+### `GET <address>/api/tracks`
+
+Returns all stored tracks.

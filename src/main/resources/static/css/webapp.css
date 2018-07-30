@@ -1,0 +1,27 @@
+div.webapp {
+  margin: auto;
+  background-color: #dddddd;
+}
+
+table.webapp {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th.webapp, td.webapp {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+th.webapp {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+tr.webapp {
+  text-align: left;
+  border: 1px solid black;
+}

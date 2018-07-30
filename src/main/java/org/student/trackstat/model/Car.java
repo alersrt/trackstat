@@ -9,6 +9,8 @@ import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Embedded;
 import javax.persistence.Entity;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
 import javax.persistence.Id;
 import javax.persistence.ManyToOne;
 import javax.persistence.Table;
@@ -44,6 +46,7 @@ public class Car {
   private String code;
 
   /** Type of transmission is used into the car. */
+  @Enumerated(value = EnumType.STRING)
   @Column(name = "transmission")
   @JsonProperty("transmission")
   @JsonSerialize(using = TransmissionSerializer.class)

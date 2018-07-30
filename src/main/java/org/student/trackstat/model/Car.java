@@ -7,6 +7,7 @@ import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
+import lombok.Builder;
 import lombok.Data;
 import org.student.trackstat.mapper.CustomCarDeserializer;
 import org.student.trackstat.mapper.CustomCarSerializer;
@@ -17,6 +18,7 @@ import org.student.trackstat.mapper.CustomCarSerializer;
 @JsonSerialize(using = CustomCarSerializer.class)
 @JsonDeserialize(using = CustomCarDeserializer.class)
 @Data
+@Builder
 public class Car {
 
   /** The car's identifier. */

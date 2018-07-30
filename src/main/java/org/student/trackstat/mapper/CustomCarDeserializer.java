@@ -24,7 +24,6 @@ public class CustomCarDeserializer extends StdDeserializer<Car> {
   @Override
   public Car deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
     throws IOException, JsonProcessingException {
-    Car car = new Car();
 
     ObjectCodec codec = jsonParser.getCodec();
     JsonNode node = codec.readTree(jsonParser);
@@ -36,12 +35,6 @@ public class CustomCarDeserializer extends StdDeserializer<Car> {
       node.get("max-speed").get("value").asDouble());
     Transmission transmission = Transmission.get(node.get("transmission").asText());
 
-    car.setId(id);
-    car.setCode(code);
-    car.setAi(ai);
-    car.setMaxSpeed(maxSpeed);
-    car.setTransmission(transmission);
-
-    return car;
+    return Car.builder().id(id).code(code).ai(ai).maxSpeed(maxSpeed).transmission(transmission).build();
   }
 }

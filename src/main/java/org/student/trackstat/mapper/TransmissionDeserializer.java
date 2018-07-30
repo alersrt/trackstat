@@ -7,7 +7,7 @@ import com.fasterxml.jackson.databind.DeserializationContext;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.deser.std.StdDeserializer;
 import java.io.IOException;
-import org.student.trackstat.model.Car.Transmission;
+import org.student.trackstat.model.Transmission;
 
 public class TransmissionDeserializer extends StdDeserializer<Transmission> {
 

@@ -12,9 +12,9 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Test;
 import org.student.trackstat.model.Car;
-import org.student.trackstat.model.Car.Transmission;
 import org.student.trackstat.model.MeasureUnit;
 import org.student.trackstat.model.Track;
+import org.student.trackstat.model.Transmission;
 
 @Log
 @Tag("unit")

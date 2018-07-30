@@ -4,11 +4,6 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import com.fasterxml.jackson.databind.annotation.JsonSerialize;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.stream.Collectors;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -54,32 +49,4 @@ public class Car {
   /** Defines track to which this information is belong. */
   @JsonIgnore
   private Track track;
-
-  /** Class is described car's transmission. */
-  public enum Transmission {
-    AUTOMATIC("automatic"),
-    MANUAL("manual");
-
-    private static final Map<String, Transmission> ENUM_MAP;
-
-    static {
-      ENUM_MAP = Collections.unmodifiableMap(Arrays.stream(Transmission.values())
-        .collect(Collectors.toMap(Transmission::toString, e -> e, (e1, e2) -> e1, ConcurrentHashMap::new)));
-    }
-
-    private String name;
-
-    Transmission(String name) {
-      this.name = name;
-    }
-
-    public static Transmission get(String name) {
-      return ENUM_MAP.get(name);
-    }
-
-    @Override
-    public String toString() {
-      return name;
-    }
-  }
 }

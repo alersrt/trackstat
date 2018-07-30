@@ -22,11 +22,9 @@ public class CarDeserializer extends StdDeserializer<Car> {
   }
 
   @Override
-  public Car deserialize(JsonParser jsonParser, DeserializationContext deserializationContext)
-    throws IOException, JsonProcessingException {
-
-    ObjectCodec codec = jsonParser.getCodec();
-    JsonNode node = codec.readTree(jsonParser);
+  public Car deserialize(JsonParser p, DeserializationContext ctxt) throws IOException, JsonProcessingException {
+    ObjectCodec codec = p.getCodec();
+    JsonNode node = codec.readTree(p);
 
     long id = node.get("id").asLong();
     String code = node.get("code").asText();

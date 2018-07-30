@@ -1,15 +1,21 @@
 package org.student.trackstat.model;
 
+import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
+import com.fasterxml.jackson.databind.annotation.JsonSerialize;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import lombok.Data;
+import org.student.trackstat.mapper.CustomCarDeserializer;
+import org.student.trackstat.mapper.CustomCarSerializer;
 
 /**
  * Describes car's model in database.
  */
+@JsonSerialize(using = CustomCarSerializer.class)
+@JsonDeserialize(using = CustomCarDeserializer.class)
 @Data
 public class Car {
 

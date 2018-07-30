@@ -31,9 +31,7 @@ public class DefaultController {
     try {
       List<Track> tracks = body.get("tracks");
       for (Track track : tracks) {
-        track.getCars().forEach(c -> {
-          c.setTrack(track);
-        });
+        track.getCars().forEach(c -> c.setTrack(track));
         manageService.save(track);
       }
       httpStatus = HttpStatus.OK;

@@ -11,13 +11,13 @@ import org.student.trackstat.model.Car;
 import org.student.trackstat.model.Car.Transmission;
 import org.student.trackstat.model.MeasureUnit;
 
-public class CustomCarDeserializer extends StdDeserializer<Car> {
+public class CarDeserializer extends StdDeserializer<Car> {
 
-  public CustomCarDeserializer() {
+  public CarDeserializer() {
     this(null);
   }
 
-  protected CustomCarDeserializer(Class<?> vc) {
+  protected CarDeserializer(Class<?> vc) {
     super(vc);
   }
 

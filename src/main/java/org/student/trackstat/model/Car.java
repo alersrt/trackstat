@@ -9,14 +9,14 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 import lombok.Builder;
 import lombok.Data;
-import org.student.trackstat.mapper.CustomCarDeserializer;
-import org.student.trackstat.mapper.CustomCarSerializer;
+import org.student.trackstat.mapper.CarDeserializer;
+import org.student.trackstat.mapper.CarSerializer;
 
 /**
  * Describes car's model in database.
  */
-@JsonSerialize(using = CustomCarSerializer.class)
-@JsonDeserialize(using = CustomCarDeserializer.class)
+@JsonSerialize(using = CarSerializer.class)
+@JsonDeserialize(using = CarDeserializer.class)
 @Data
 @Builder
 public class Car {

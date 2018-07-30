@@ -6,13 +6,13 @@ import com.fasterxml.jackson.databind.ser.std.StdSerializer;
 import java.io.IOException;
 import org.student.trackstat.model.Car;
 
-public class CustomCarSerializer extends StdSerializer<Car> {
+public class CarSerializer extends StdSerializer<Car> {
 
-  public CustomCarSerializer() {
+  public CarSerializer() {
     this(null);
   }
 
-  protected CustomCarSerializer(Class<Car> t) {
+  protected CarSerializer(Class<Car> t) {
     super(t);
   }
 
